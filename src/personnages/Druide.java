@@ -42,6 +42,13 @@ public class Druide {
 
 		}
 	}
+	
+	public void booster(Gaulois gaulois) {
+		String nom = gaulois.getNom();
+		if(nom == "Obélix") {
+			System.out.println("Non, Obélix !... Tu n’auras pas de potionmagique !");	
+		}
+	}
 	public static void main(String[] args) {
 		Druide panoramix = new Druide("Panoramix",5,10);
 		panoramix.preparerPotion();
