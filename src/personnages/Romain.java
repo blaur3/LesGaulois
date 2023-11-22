@@ -9,6 +9,7 @@ public class Romain {
 		super();
 		this.nom = nom;
 		this.force = force;
+		assert this.force > 0;
 	}
 	
 	public String getNom() {
@@ -21,6 +22,8 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 	public void recevoirCoup(int forceCoup) {
+		assert forceCoup > 0;
+		int forceini = force;
 		force -= forceCoup;
 		if (force > 0) {
 			parler("Aïe");
@@ -28,12 +31,13 @@ public class Romain {
 		else {
 			parler("J'abandonne...");
 		}
+		assert forceini> force;
 	}
 	
 	public static void main(String[] args) {
+		Romain Lulo = new Romain("Lullo", -6);
+		Lulo.parler("jE SUIS LULO");	}
 		
-	}
-	
 	}
 
 	
